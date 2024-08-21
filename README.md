@@ -35,12 +35,11 @@
 
 **Exemplo de um trecho do procedimento:**
 
-```markdown
 **Aplicação do patch:**
 
 1. **Acesso ao servidor:** Conecte-se ao servidor WebLogic via SSH.
 2. **Navegue até o diretório do patch:**
-   ```bash
+  
    cd /u01/oracle/middleware/patch_files
 
 ## O que é o OPatch?
