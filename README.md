@@ -73,3 +73,17 @@ Geração de relatórios: Gera relatórios detalhados sobre o processo de aplica
 * **-invPtrLoc:** Especifica o local do inventário do Oracle.
 * **-jreLoc:** Especifica o local da JRE.
 * **-patch_id:* Especifica o ID do patch a ser aplicado.
+
+## Aplicando um Patch no Oracle WebLogic Server usando o OPatch
+**Precauções**
+
+* **Backup:** Sempre realize um backup completo do seu ambiente antes de aplicar qualquer patch.
+* **Planejamento:** Escolha um período de baixa carga para minimizar o impacto da atualização nos seus aplicativos.
+**Documentação:** Mantenha um registro detalhado de todas as etapas do processo.
+
+**Requisitos**
+
+* **Acesso ao servidor:** Com privilégios de root ou usuário com permissão para executar o OPatch.
+* **Patch:** O arquivo do patch baixado do portal de suporte da Oracle.
+* **OPatch:** A ferramenta OPatch instalada no seu ambiente Oracle.
+* **JRE:** Uma JRE compatível com a versão do seu WebLogic.
