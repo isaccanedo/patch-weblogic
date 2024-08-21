@@ -42,3 +42,35 @@
 2. **Navegue até o diretório do patch:**
    ```bash
    cd /u01/oracle/middleware/patch_files
+
+## O que é o OPatch?
+O OPatch é uma ferramenta de linha de comando essencial fornecida pela Oracle para automatizar a aplicação de patches em softwares Oracle, como o Oracle Database e o WebLogic Server. Ele garante a integridade do sistema, simplifica o processo de atualização e oferece funcionalidades como verificação de compatibilidade, registro de mudanças e rollback de patches.
+
+### Por que usar o OPatch?
+* **Automatização:** Simplifica o processo de aplicação de patches, reduzindo a possibilidade de erros manuais.
+* **Verificação de compatibilidade:** Garante que o patch seja compatível com a versão atual do software e com outros patches já aplicados.
+* **Registro:** Mantém um registro detalhado das mudanças realizadas, facilitando a auditoria e o rollback, se necessário.
+* **Flexibilidade:** Permite aplicar patches individuais, patches de conjunto (PSUs) e realizar outras tarefas relacionadas a patches.
+
+### Funcionalidades Principais
+* **Aplicação de patches:** A principal função do OPatch é aplicar patches a um software Oracle.
+* **Verificação de integridade:** Verifica a integridade dos arquivos após a aplicação do patch.
+* **Rollback de patches:** Permite reverter a aplicação de um patch, caso necessário.
+* **Gerenciamento de inventário:** Mantém um inventário dos patches aplicados.
+Geração de relatórios: Gera relatórios detalhados sobre o processo de aplicação de patches.
+
+## Como o OPatch funciona?
+* **Identificação do patch:** O OPatch identifica o patch a ser aplicado com base em seu ID ou nome.
+* **Verificação de pré-requisitos:** O OPatch verifica se o sistema atende aos pré-requisitos para a aplicação do patch.
+* **Descompactação do patch:** O patch é descompactado para um diretório temporário.
+* **Aplicação das mudanças:** O OPatch copia os novos arquivos para os locais corretos, atualiza os scripts e configurações, e registra as mudanças.
+* **Verificação pós-aplicação:** O OPatch verifica se todas as mudanças foram aplicadas corretamente.
+
+## Exemplo de Comando OPatch
+```
+./opatch apply -silent -invPtrLoc=/u01/oracle/middleware/inventory -jreLoc=/u01/java/jdk1.8.0_291 -patch_id=32548952
+```
+* **-silent:** Executa o OPatch em modo silencioso.
+* **-invPtrLoc:** Especifica o local do inventário do Oracle.
+* **-jreLoc:** Especifica o local da JRE.
+* **-patch_id:* Especifica o ID do patch a ser aplicado.
