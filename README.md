@@ -95,7 +95,26 @@ Geração de relatórios: Gera relatórios detalhados sobre o processo de aplica
 * Utilize o script ```stopWebLogic.sh``` para parar todos os servidores gerenciados.
 * Verifique se todos os processos do WebLogic foram encerrados.
 
-### Descompactar o Patch
+## Descompactar o Patch
 
 * Crie um diretório para descompactar o patch (por exemplo, ```/u01/oracle/middleware/patch_files)```.
 * Descompacte o arquivo do patch nesse diretório.
+
+## Verificar o Inventário
+
+* Execute o comando ```opatch lsinventory``` para verificar o inventário atual do seu Oracle Home
+
+## Aplicar o Patch
+
+* Navegue até o diretório onde o patch foi descompactado.
+* Execute o seguinte comando:
+
+```
+./opatch apply -silent -invPtrLoc=/u01/oracle/middleware/inventory -jreLoc=/u01/java/jdk1.8.0_291 -patch_id=32548952
+```
+```
+* -silent: Executa o OPatch em modo silencioso.
+* -invPtrLoc: Especifica o local do inventário do Oracle.
+* -jreLoc: Especifica o local da JRE.
+* -patch_id: Substitua 32548952 pelo ID do seu patch.
+```
