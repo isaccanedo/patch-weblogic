@@ -116,5 +116,38 @@ Geração de relatórios: Gera relatórios detalhados sobre o processo de aplica
 * -silent: Executa o OPatch em modo silencioso.
 * -invPtrLoc: Especifica o local do inventário do Oracle.
 * -jreLoc: Especifica o local da JRE.
-* -patch_id: Substitua 32548952 pelo ID do seu patch.
+* -patch_id: Substitua **32548952** pelo ID do seu patch.
+```
+
+## Verificar a Aplicação do Patch
+
+* Execute novamente ```opatch lsinventory``` para verificar se o patch foi adicionado ao inventário.
+* Verifique os logs do OPatch para identificar qualquer erro ou aviso.
+
+## Iniciar os Serviços do WebLogic:
+
+Utilize o script ```startWebLogic.sh``` para iniciar os servidores gerenciados.
+
+**Exemplo Completo**
+
+```
+# Parar os serviços
+./stopWebLogic.sh
+
+# Descompactar o patch
+cd /u01/oracle/middleware/patch_files
+unzip patch_file.zip
+
+# Verificar o inventário
+opatch lsinventory
+
+# Aplicar o patch
+cd patch_directory
+./opatch apply -silent -invPtrLoc=/u01/oracle/middleware/inventory -jreLoc=/u01/java/jdk1.8.0_291 -patch_id=32548952
+
+# Verificar a aplicação
+opatch lsinventory
+
+# Iniciar os serviços
+./startWebLogic.sh
 ```
