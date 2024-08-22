@@ -87,3 +87,15 @@ Geração de relatórios: Gera relatórios detalhados sobre o processo de aplica
 * **Patch:** O arquivo do patch baixado do portal de suporte da Oracle.
 * **OPatch:** A ferramenta OPatch instalada no seu ambiente Oracle.
 * **JRE:** Uma JRE compatível com a versão do seu WebLogic.
+
+## Passos
+
+### Parar os Serviços do WebLogic:
+
+* Utilize o script ```stopWebLogic.sh``` para parar todos os servidores gerenciados.
+* Verifique se todos os processos do WebLogic foram encerrados.
+
+### Descompactar o Patch
+
+* Crie um diretório para descompactar o patch (por exemplo, ```/u01/oracle/middleware/patch_files)```.
+* Descompacte o arquivo do patch nesse diretório.
