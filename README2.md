@@ -1,4 +1,4 @@
-# Atualização de Patch - Oracle WebLogic 12.2.1.4.0
+## Atualização de Patch - Oracle WebLogic 12.2.1.4.0
 
 Este documento descreve o processo de aplicação de um patch para o Oracle WebLogic Server 12.2.1.4.0.
 
