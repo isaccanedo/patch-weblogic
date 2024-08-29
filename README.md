@@ -1,4 +1,4 @@
-## Documentação de Atualização de Patch - Oracle WebLogic Server
+### Documentação de Atualização de Patch - Oracle WebLogic Server
 
 ### 1. Introdução
 * **Objetivo:** Detalhar os passos para aplicar o patch [Número do Patch] no ambiente de produção do WebLogic.
